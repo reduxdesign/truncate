@@ -26,8 +26,8 @@ Add the CDN link to the head of your page:
 To use the script with default settings, add the truncate-text attribute to your HTML elements:
 ```html
 <p truncate-text="100">This is a long paragraph that will be truncated after 100 characters...</p>
-In your JavaScript, call the truncateText function without any parameters:
 ```
+In your JavaScript, call the truncateText function without any parameters:
 ```javascript
 truncateText();
 ```
