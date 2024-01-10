@@ -23,7 +23,7 @@ Copy the <script> and paste into the <head> of your page
 
 ## Usage
 ### Basic Usage
-To use the script with default settings, add the truncate-text attribute to your HTML elements:
+To use the script with default settings, add the truncate-text attribute to your HTML elements and set the max-characters as the value:
 ```html
 <p truncate-text="100">This is a long paragraph that will be truncated after 100 characters...</p>
 ```
