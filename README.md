@@ -16,9 +16,9 @@ Simply include the `truncateText.js` file in your project and add it to your HTM
 <script src="path/to/truncateText.js"></script>
 ```
 ### CDN
-Add the CDN link to the head of your page:
+Copy the <script> and paste into the <head> of your page
 ```html
-// Link To be added
+<script src="https://cdn.jsdelivr.net/gh/reduxdesign/truncate@e4bd3164b4edb7ca4925bc9336c907b282e44c17/truncate-v1.js)"></script>
 ```
 
 ## Usage
