@@ -11,9 +11,9 @@ This JavaScript script provides a flexible way to truncate text content in HTML 
 
 ## Installation
 ### Self-Host
-Simply include the `truncateText.js` file in your project and add it to your HTML:
+Simply include the `truncate-v1.js` file in your project and add it to your HTML:
 ```html
-<script src="path/to/truncateText.js"></script>
+<script src="path/to/truncate-v1.js"></script>
 ```
 ### CDN
 Copy the <script> and paste into the <head> of your page
