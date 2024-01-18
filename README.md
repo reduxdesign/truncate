@@ -20,7 +20,9 @@ Simply include the `truncate-1.1.2.js` file in your project and add it to your H
 Copy the <script> and paste into the <head> of your page
 ```html
 <script src="https://cdn.jsdelivr.net/gh/reduxdesign/truncate@d623ad91b86b567af04e31384990a8a838fd3cc5/truncate-1.1.2.js"></script>
-// or use Minified Version below
+```
+Or use Minified Version below
+```html
 <script src="https://cdn.jsdelivr.net/gh/reduxdesign/truncate@e248f43131d6b65cc00fb7038072edf0556ccc60/truncate-1.1.2.min.js"></script>
 ```
 
