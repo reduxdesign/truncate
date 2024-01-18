@@ -4,17 +4,16 @@
         // Default options setup
         const defaults = {
             attributeName: 'truncate-text',    // Default attribute name to target for truncation
-            maxLengthOverride: null,           // Allows global override of maximum length
             defaultMaxLength: 100              // Default maximum length if attribute value is not set or invalid
         };
 
         // Merging user-provided options with defaults
         const options = { ...defaults, ...userOptions };
-        const { attributeName, maxLengthOverride, defaultMaxLength } = options;
+        const { attributeName, defaultMaxLength } = options;
 
         // Validate the provided options
-        if (typeof attributeName !== 'string' || (maxLengthOverride !== null && (isNaN(maxLengthOverride) || maxLengthOverride < 0))) {
-            console.error('Invalid options: attributeName should be a string and maxLengthOverride should be a non-negative number or null.');
+        if (typeof attributeName !== 'string') {
+            console.error('Invalid option: attributeName should be a string.');
             return;
         }
 
@@ -28,11 +27,13 @@
 
         // Process each element
         elements.forEach(element => {
-            // Determine maxLength - use maxLengthOverride if provided, otherwise parse the attribute value
-            let maxLength = maxLengthOverride !== null ? maxLengthOverride : parseInt(element.getAttribute(attributeName), 10);
+            // Parse the attribute value or use the defaultMaxLength if value is invalid
+            const attrValue = element.getAttribute(attributeName);
+            const maxLength = attrValue ? parseInt(attrValue, 10) : defaultMaxLength;
 
-            // Use defaultMaxLength if the parsed value is invalid
+            // Check if maxLength is valid
             if (isNaN(maxLength) || maxLength < 0) {
+                console.error(`Invalid maxLength value for element. Expected a non-negative number, got '${attrValue}'. Using defaultMaxLength instead.`);
                 maxLength = defaultMaxLength;
             }
 
